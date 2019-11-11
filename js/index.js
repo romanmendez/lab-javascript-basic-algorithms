@@ -95,3 +95,15 @@ function palindrome(text){
 }
 let userText = prompt("Write some text to test if it's a palindrome:");
 palindrome(userText)
+
+function palindromeSimple(text){
+  let forwardText = text.replace(/[^\w]/g, "").split(" ").join("").toLowerCase()
+  let backwardsText = forwardText.split("").reverse().join("")
+  if(forwardText === backwardsText){
+      console.log("Text is a Palindrome.")
+    } else {
+      console.log("Text is not a Palindrome")
+  }
+}
+let userText = prompt("Write some text to test if it's a palindrome:");
+palindrome(userText)
