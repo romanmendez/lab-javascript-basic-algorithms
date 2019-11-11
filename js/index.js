@@ -78,6 +78,12 @@ for(let i = 0; i < wordCount.length; i++){
 console.log(wordCount.length)
 console.log(et)
 
+function findWord(text, word){
+  let reg = new RegExp("( "+word+")\\W", "g")
+  return text.toLowerCase().match(reg).length
+}
+findWord(loremIpsum, "et")
+
 // Bonus 2
 function palindrome(text){
   let x = text.replace(/[^\w]/g, "").split(" ").join("").toLowerCase()
